@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# Ensure the admin UI is served at /admin
+[[redirects]]
+  from = "/admin"
+  to = "/admin/index.html"
+  status = 200
+  force = true
+
+# Optional Next.js Netlify plugin (Netlify auto‑detects Next.js, but explicit declaration helps)
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

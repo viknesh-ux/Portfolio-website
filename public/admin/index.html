@@ -2,20 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Decap CMS Admin</title>
-  <!-- Netlify Identity widget for login -->
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Decap CMS – Admin</title>
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    body { margin:0; font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background:#1a1a1a; color:#eee; }
+    #nc-root { min-height:100vh; }
+    .netlify-identity-widget { position:fixed; top:1rem; right:1rem; }
+  </style>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <!-- Netlify CMS script -->
-<script>
-  console.log('Admin page loaded');
-  if (window.CMS) {
-    window.CMS.init();
-  }
-</script>
-</head>
-<body>
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   <script>
-    // Open the Netlify Identity widget if the user is not logged in
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on('init', function(user) {
         if (!user) {
@@ -23,8 +20,14 @@
         }
       });
     }
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.CMS) {
+        window.CMS.init();
+      }
+    });
   </script>
-  <!-- Root element where CMS will mount -->
+</head>
+<body>
   <div id="nc-root"></div>
 </body>
 </html>
