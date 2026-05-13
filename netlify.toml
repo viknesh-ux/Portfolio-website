@@ -4,6 +4,12 @@
 
 # Ensure the admin UI is served at /admin
 [[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/admin"
   to = "/admin/index.html"
   status = 200
