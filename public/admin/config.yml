@@ -89,4 +89,7 @@ collections:
     extension: "json"
     create: true
     slug: "{{slug}}"
-    fields: []
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Date", name: "date", widget: "date" }
