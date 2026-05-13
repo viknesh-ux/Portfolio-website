@@ -5,11 +5,11 @@
   "bio": "Focused on blue-team and offensive testing foundations. I enjoy solving CTFs, building security tooling, and documenting hands-on learnings.",
   "education": [
     {
-      "institution": "University Name",
-      "program": "B.Tech Cyber Security",
-      "startYear": 2023,
-      "endYear": 2027,
-      "details": "Relevant coursework: Network Security, DFIR, Secure Coding."
+      "institution": "Kerala University",
+      "program": "B.Voc Software Development ",
+      "startYear": 2021,
+      "endYear": 2024,
+      "details": " "
     }
   ],
   "interests": [
@@ -19,7 +19,7 @@
     "Reverse Engineering"
   ],
   "intro": "I build secure systems, perform offensive security research, and publish practical writeups for real-world defense.",
-  "phone": "+91 90000 00000",
+  "phone": "+91 6282337740",
   "domains": [
     "Web Security",
     "Network Security",
@@ -30,6 +30,6 @@
   "medium": "https://medium.com",
   "role": "Cybersecurity Student",
   "fullName": "VIGNESH V PALAZHI",
-  "email": "you@example.com",
+  "email": "vigneshvpalazhi@gmail.com",
   "linkedin": "https://linkedin.com"
 }
