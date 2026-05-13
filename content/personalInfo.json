@@ -1,11 +1,8 @@
 {
-  "fullName": "Your Name",
-  "role": "Cybersecurity Student",
-  "intro": "I build secure systems, perform offensive security research, and publish practical writeups for real-world defense.",
-  "bio": "Focused on blue-team and offensive testing foundations. I enjoy solving CTFs, building security tooling, and documenting hands-on learnings.",
-  "interests": ["CTFs", "Threat Hunting", "Secure SDLC", "Reverse Engineering"],
+  "resumeUrl": "#",
   "careerGoals": "Grow into a security engineer role focused on application and cloud security.",
-  "domains": ["Web Security", "Network Security", "Cloud Security", "Forensics", "OSINT"],
+  "github": "https://github.com",
+  "bio": "Focused on blue-team and offensive testing foundations. I enjoy solving CTFs, building security tooling, and documenting hands-on learnings.",
   "education": [
     {
       "institution": "University Name",
@@ -15,10 +12,24 @@
       "details": "Relevant coursework: Network Security, DFIR, Secure Coding."
     }
   ],
-  "email": "you@example.com",
+  "interests": [
+    "CTFs",
+    "Threat Hunting",
+    "Secure SDLC",
+    "Reverse Engineering"
+  ],
+  "intro": "I build secure systems, perform offensive security research, and publish practical writeups for real-world defense.",
   "phone": "+91 90000 00000",
-  "github": "https://github.com",
-  "linkedin": "https://linkedin.com",
+  "domains": [
+    "Web Security",
+    "Network Security",
+    "Cloud Security",
+    "Forensics",
+    "OSINT"
+  ],
   "medium": "https://medium.com",
-  "resumeUrl": "#"
+  "role": "Cybersecurity Student",
+  "fullName": "VIGNESH V PALAZHI",
+  "email": "you@example.com",
+  "linkedin": "https://linkedin.com"
 }
