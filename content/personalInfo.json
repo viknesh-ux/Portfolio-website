@@ -1,0 +1,24 @@
+{
+  "fullName": "Your Name",
+  "role": "Cybersecurity Student",
+  "intro": "I build secure systems, perform offensive security research, and publish practical writeups for real-world defense.",
+  "bio": "Focused on blue-team and offensive testing foundations. I enjoy solving CTFs, building security tooling, and documenting hands-on learnings.",
+  "interests": ["CTFs", "Threat Hunting", "Secure SDLC", "Reverse Engineering"],
+  "careerGoals": "Grow into a security engineer role focused on application and cloud security.",
+  "domains": ["Web Security", "Network Security", "Cloud Security", "Forensics", "OSINT"],
+  "education": [
+    {
+      "institution": "University Name",
+      "program": "B.Tech Cyber Security",
+      "startYear": 2023,
+      "endYear": 2027,
+      "details": "Relevant coursework: Network Security, DFIR, Secure Coding."
+    }
+  ],
+  "email": "you@example.com",
+  "phone": "+91 90000 00000",
+  "github": "https://github.com",
+  "linkedin": "https://linkedin.com",
+  "medium": "https://medium.com",
+  "resumeUrl": "#"
+}

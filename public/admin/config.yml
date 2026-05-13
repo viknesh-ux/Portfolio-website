@@ -1,0 +1,80 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "public/uploads"
+public_folder: "/uploads"
+collections:
+  - name: "personalInfo"
+    label: "Personal Info"
+    folder: "content"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Full Name", name: "fullName", widget: "string" }
+      - { label: "Role", name: "role", widget: "string" }
+      - { label: "Intro", name: "intro", widget: "text" }
+      - { label: "Bio", name: "bio", widget: "text" }
+      - { label: "Interests", name: "interests", widget: "list" }
+      - { label: "Career Goals", name: "careerGoals", widget: "string" }
+      - { label: "Domains", name: "domains", widget: "list" }
+      - { label: "Education", name: "education", widget: "list", fields: [{ label: "Institution", name: "institution", widget: "string" }, { label: "Program", name: "program", widget: "string" }, { label: "Start Year", name: "startYear", widget: "number" }, { label: "End Year", name: "endYear", widget: "number" }, { label: "Details", name: "details", widget: "text" }] }
+      - { label: "Email", name: "email", widget: "string" }
+      - { label: "Phone", name: "phone", widget: "string" }
+      - { label: "GitHub", name: "github", widget: "string" }
+      - { label: "LinkedIn", name: "linkedin", widget: "string" }
+      - { label: "Medium", name: "medium", widget: "string" }
+      - { label: "Resume URL", name: "resumeUrl", widget: "string" }
+  - name: "skills"
+    label: "Skills"
+    folder: "content"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Level", name: "level", widget: "string" }
+  - name: "projects"
+    label: "Projects"
+    folder: "content"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "GitHub URL", name: "githubUrl", widget: "string" }
+      - { label: "Demo URL", name: "demoUrl", widget: "string" }
+      - { label: "Tech Stack", name: "techStack", widget: "list" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Difficulty", name: "difficulty", widget: "string" }
+      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Featured", name: "featured", widget: "boolean" }
+  - name: "blogs"
+    label: "Blog Posts"
+    folder: "content"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Medium URL", name: "mediumUrl", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Reading Time", name: "readingTime", widget: "string" }
+      - { label: "Published At", name: "publishedAt", widget: "datetime" }
+      - { label: "Featured", name: "featured", widget: "boolean" }
+  - name: "certifications"
+    label: "Certifications"
+    folder: "content"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Issuer", name: "issuer", widget: "string" }
+      - { label: "Credential URL", name: "credentialUrl", widget: "string" }
+      - { label: "Date", name: "date", widget: "date" }
+  - name: "achievements"
+    label: "Achievements"
+    folder: "content"
+    create: true
+    slug: "{{slug}}"
+    fields: []

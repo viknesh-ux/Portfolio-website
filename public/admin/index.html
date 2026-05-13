@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Decap CMS Admin</title>
+  <!-- Netlify Identity widget for login -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <!-- Netlify CMS script -->
+<script>
+  console.log('Admin page loaded');
+  if (window.CMS) {
+    window.CMS.init();
+  }
+</script>
+</head>
+<body>
+  <script>
+    // Open the Netlify Identity widget if the user is not logged in
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', function(user) {
+        if (!user) {
+          window.netlifyIdentity.open();
+        }
+      });
+    }
+  </script>
+  <!-- Root element where CMS will mount -->
+  <div id="nc-root"></div>
+</body>
+</html>

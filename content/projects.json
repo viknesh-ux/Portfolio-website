@@ -1,0 +1,14 @@
+[
+  {
+    "_id": "p1",
+    "title": "Web App Pentest Toolkit",
+    "description": "Automated reconnaissance and vulnerability triage workflow for student pentesting labs.",
+    "githubUrl": "https://github.com",
+    "demoUrl": "https://example.com",
+    "techStack": ["Next.js", "Python", "Docker"],
+    "tags": ["OWASP", "Automation"],
+    "difficulty": "Intermediate",
+    "category": "Web Security",
+    "featured": true
+  }
+]

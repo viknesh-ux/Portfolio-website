@@ -1,0 +1,10 @@
+[
+  { "_id": "Web Security-0", "name": "Burp Suite", "category": "Web Security", "level": "Intermediate" },
+  { "_id": "Network Security-1", "name": "Wireshark", "category": "Network Security", "level": "Intermediate" },
+  { "_id": "Reverse Engineering-2", "name": "Ghidra", "category": "Reverse Engineering", "level": "Intermediate" },
+  { "_id": "Forensics-3", "name": "Autopsy", "category": "Forensics", "level": "Intermediate" },
+  { "_id": "OSINT-4", "name": "theHarvester", "category": "OSINT", "level": "Intermediate" },
+  { "_id": "Linux-5", "name": "Bash Scripting", "category": "Linux", "level": "Intermediate" },
+  { "_id": "Programming-6", "name": "Python", "category": "Programming", "level": "Intermediate" },
+  { "_id": "Cloud Security-7", "name": "AWS Security Hub", "category": "Cloud Security", "level": "Intermediate" }
+]

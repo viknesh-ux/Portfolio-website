@@ -1,26 +1,212 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+  --app-bg: radial-gradient(circle at top right, rgba(34, 211, 238, 0.08), transparent 28%), #0a0a0f;
+  --text-soft: #94a3b8;
+  --glass-border: rgba(34, 211, 238, 0.2);
+  --glass-bg: rgba(14, 19, 32, 0.6);
+  --field-border: rgba(63, 63, 70, 0.9);
+  --field-bg: rgba(10, 10, 15, 0.8);
+  --field-text: #e4e4e7;
+  --chip-text: #a5f3fc;
+  --chip-bg: rgba(34, 211, 238, 0.08);
+  --secondary-text: #cffafe;
+  --secondary-bg: rgba(7, 15, 29, 0.6);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  touch-action: manipulation;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: var(--font-geist-sans), sans-serif;
+  background: var(--app-bg);
+  color: #f4f4f5;
+  -webkit-text-size-adjust: 100%;
+}
+
+button,
+a[href],
+label,
+input,
+textarea,
+select {
+  touch-action: manipulation;
+}
+
+.glass {
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+}
+
+.field {
+  width: 100%;
+  border: 1px solid var(--field-border);
+  border-radius: 10px;
+  padding: 0.65rem 0.8rem;
+  background: var(--field-bg);
+  color: var(--field-text);
+}
+
+.field:focus {
+  outline: 1px solid rgba(34, 211, 238, 0.6);
+}
+
+.chip {
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  color: var(--chip-text);
+  background: var(--chip-bg);
+}
+
+.btn-neon,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 180ms ease;
+  padding: 0.62rem 1rem;
+}
+
+.btn-neon {
+  border: 1px solid rgba(34, 211, 238, 0.9);
+  color: #0e1727;
+  background: #67e8f9;
+  box-shadow: 0 0 16px rgba(34, 211, 238, 0.45);
+}
+
+.btn-neon:hover {
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  color: var(--secondary-text);
+  background: var(--secondary-bg);
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 56px 0 0 0;
+  /* Above page content (incl. Framer layers); below header z-[120] */
+  z-index: 110;
+  background: rgba(2, 6, 23, 0.7);
+  backdrop-filter: blur(4px);
+  padding: 10px;
+  /* Let taps reach children reliably on Android WebView */
+  touch-action: auto;
+}
+
+.mobile-menu-panel {
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  background: linear-gradient(180deg, rgba(10, 17, 30, 0.96), rgba(8, 13, 24, 0.98));
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 14px 38px rgba(2, 6, 23, 0.5);
+  touch-action: manipulation;
+  isolation: isolate;
+}
+
+.mobile-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 48px;
+  text-align: left;
+  border: 1px solid rgba(63, 63, 70, 0.9);
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 0.92rem;
+  color: #e4e4e7;
+  background: rgba(24, 24, 27, 0.6);
+  transition: all 160ms ease;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(34, 211, 238, 0.15);
+}
+
+.mobile-menu-item:hover {
+  border-color: rgba(34, 211, 238, 0.45);
+  background: rgba(31, 41, 55, 0.75);
+}
+
+.mobile-menu-item-active {
+  border-color: rgba(34, 211, 238, 0.8);
+  background: rgba(34, 211, 238, 0.16);
+  color: #a5f3fc;
+}
+
+.mobile-menu-order {
+  min-width: 22px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: #67e8f9;
+  opacity: 0.85;
+}
+
+.cyber-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.25;
+  background-image:
+    linear-gradient(rgba(34, 211, 238, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.12) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at center, black, transparent 75%);
+}
+
+.custom-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(34, 211, 238, 0.75);
+  border-radius: 999px;
+  pointer-events: none;
+  z-index: 100;
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+}
+
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none;
+  }
+
+  .btn-neon,
+  .btn-secondary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .mobile-menu-overlay {
+    inset: 53px 0 0 0;
+    padding: 8px;
+  }
+
+  .mobile-menu-panel {
+    padding: 9px;
+    border-radius: 14px;
+  }
+
+  .mobile-menu-item {
+    font-size: 0.86rem;
+    padding: 10px;
+  }
 }

@@ -1,0 +1,9 @@
+[
+  {
+    "_id": "c1",
+    "name": "Google Cybersecurity",
+    "issuer": "Google",
+    "credentialUrl": "https://example.com",
+    "date": "2025-10-10"
+  }
+]
